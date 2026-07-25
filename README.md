@@ -22,10 +22,10 @@ RemainAfterExit=true
 
 [Install]  
 WantedBy=multi-user.target  
+```
 
 3.- Enable and start the service:  
 sudo systemctl daemon-reload  
 sudo systemctl enable --now mp100-led-off.service
-```
 
 From that point on the leds should turn off when you log in. If you need them off any earlier you're gonna need to dig into the pc to physically disconnect the leds.
