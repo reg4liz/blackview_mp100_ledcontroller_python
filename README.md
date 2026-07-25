@@ -4,9 +4,9 @@ Simple python script to control the rgb leds on the case of the blackview mp100 
 Modify b1, b2 and b3 in the script to set the mode, intensity and speed respectively. Set b1 to THEME_OFF to turn leds off.
 
 # Turning the leds off automatically
-To make the leds turn off on bootup, set b1 to THEME_OFF and create a systemd service:
+To make the leds turn off on bootup, set b1 to THEME_OFF in mp100_led.py and create a systemd service:
 
-1.- Create a systemd service file:
+1.- Create a systemd service file:  
 sudo nano /etc/systemd/system/mp100-led-off.service
 
 2.- Edit the systemd service file and paste this inside (change ExecStart with your paths as required):
@@ -22,8 +22,8 @@ RemainAfterExit=true
 [Install]
 WantedBy=multi-user.target
 
-3.- Enable and start the service:
-sudo systemctl daemon-reload
+3.- Enable and start the service:  
+sudo systemctl daemon-reload  
 sudo systemctl enable --now mp100-led-off.service
 
 From that point on the leds should turn off when you log in. If you need them off any earlier you're gonna need to dig into the pc to physically disconnect the leds.
