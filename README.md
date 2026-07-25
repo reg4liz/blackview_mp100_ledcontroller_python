@@ -9,7 +9,7 @@ To make the leds turn off on bootup, set b1 to THEME_OFF in mp100_led.py and cre
 1.- Create a systemd service file:  
 sudo nano /etc/systemd/system/mp100-led-off.service
 
-2.- Edit the systemd service file and paste this inside (change ExecStart with your paths as required):
+2.- Edit the systemd service file and paste this inside (change ExecStart with your paths as required):  
 [Unit]
 Description=Turn off Blackview MP100 RGB LEDs
 After=multi-user.target serial-getty@ttyUSB0.service
